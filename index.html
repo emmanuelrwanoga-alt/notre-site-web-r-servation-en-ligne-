@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hôtel Paradise – Accueil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">PARADISE</div>
+        <nav class="main-nav">
+          <a href="index.html">Accueil</a>
+          <a href="chambres.html">Chambres</a>
+          <a href="restaurant.html">Restaurant</a>
+          <a href="services.html">Services</a>
+          <a href="reservation.html">Réservation</a>
+          <a href="contact.html">Contact</a>
+          <a href="client.html">Espace Client</a>
+          <a href="admin.html">Administration</a>
+        </nav>
+        <a class="btn reserv" href="reservation.html">RÉSERVER</a>
+      </div>
+    </header>
+
+    <section class="hero reveal">
+      <div class="hero-overlay"></div>
+      <div class="content-panel">
+        <div class="hero-inner container">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Bienvenue à</p>
+            <h1>Hôtel <span>Paradise</span> — l’élégance au bord du lac Kivu</h1>
+            <p class="lead">Découvrez un refuge raffiné à Bukavu, où confort, hospitalité et vue spectaculaire sur le lac créent un séjour inoubliable.</p>
+            <a class="btn primary hero-btn" href="#book">RÉSERVER</a>
+          </div>
+
+          <aside class="reservation-box reveal" id="book">
+            <form class="reservation-form">
+              <div class="row input-row">
+                <label>Arrivée
+                  <input type="date" name="arrive">
+                </label>
+                <label>Départ
+                  <input type="date" name="depart">
+                </label>
+                <label>Chambre
+                  <select name="type">
+                    <option>Chambre Standard</option>
+                    <option>Chambre Deluxe</option>
+                    <option>Suite Junior</option>
+                    <option>Suite Royale</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="row input-row">
+                <label>Adultes
+                  <select name="adults">
+                    <option>2</option>
+                    <option>1</option>
+                    <Option>3</Option>
+                  </select>
+                </label>
+                <label>Enfants
+                  <select name="children">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                  </select>
+                </label>
+                <button class="btn primary" type="submit">VÉRIFIER LA DISPONIBILITÉ</button>
+              </div>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <main class="container">
+      <section class="services reveal">
+        <h2>Pourquoi choisir Paradise ?</h2>
+        <div class="cards">
+          <article class="card">
+            <img src="photo/WhatsApp Image 2026-08-09 at 23.47.44 (2).jpeg" alt="Piscine avec vue sur le lac">
+            <h3>Piscine panoramique</h3>
+            <p>Profitez d’une piscine relaxante avec une vue imprenable sur le lac Kivu.</p>
+          </article>
+          <article class="card">
+            <img src="photo/WhatsApp Image 2026-08-09 at 23.47.44 (1).jpeg" alt="Spa et bien-être">
+            <h3>Spa & Bien-être</h3>
+            <p>Massages, sauna et soins personnalisés pour un moment de détente absolu.</p>
+          </article>
+          <article class="card">
+            <img src="photo/WhatsApp Image 2026-08-09 at 23.47.44.jpeg" alt="Salle de conférence moderne">
+            <h3>Salle de conférence</h3>
+            <p>Un espace professionnel élégant pour séminaires, réunions et événements.</p>
+          </article>
+          <article class="card">
+            <img src="photo/WhatsApp Image 2026-08-10 at 01.32.41.jpeg" alt="Connexion Wi-Fi rapide" width="310PX">
+            <h3>Wi-Fi haut débit</h3>
+            <p>Restez connecté partout dans l’hôtel grâce à une connexion fiable.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact reveal">
+        <div class="page-intro">
+          <h2>Nous contacter</h2>
+          <p>Notre équipe est à votre disposition pour vous accompagner avant, pendant et après votre séjour.</p>
+        </div>
+        <div class="contact-grid">
+          <div>
+            <h3>Nos coordonnées</h3>
+            <p>Adresse: Avenue de la Paix, Quartier Kadutu, Bukavu, Sud-Kivu, RDC</p>
+            <p>Téléphone: +243 99 000 0000</p>
+            <p>Email: reservation@hotelparadise-rdc.com</p>
+            <p>Horaires: Lundi–Dimanche, 07:00–23:00</p>
+          </div>
+          <form class="contact-form">
+            <input placeholder="Votre nom">
+            <input type="email" placeholder="Votre email">
+            <input placeholder="Sujet">
+            <textarea rows="6" placeholder="Votre message"></textarea>
+            <button class="btn primary">ENVOYER LE MESSAGE</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer reveal">
+      <div class="container footer-inner">
+        <div>© 2026 Hôtel Paradise</div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

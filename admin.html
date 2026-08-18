@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hôtel Paradise – Administration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
+  </head>
+  <body class="admin-mockup">
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">PARADISE</div>
+        <nav class="main-nav">
+          <a href="index.html">Accueil</a>
+          <a href="chambres.html">Chambres</a>
+          <a href="restaurant.html">Restaurant</a>
+          <a href="services.html">Services</a>
+          <a href="reservation.html">Réservation</a>
+          <a href="contact.html">Contact</a>
+          <a href="client.html">Espace Client</a>
+          <a class="active" href="admin.html">Administration</a>
+        </nav>
+        <a class="btn reserv" href="reservation.html">RÉSERVER</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="admin-dashboard">
+        <div class="dashboard-layout">
+          <aside class="admin-sidebar">
+            <div class="sidebar-brand">
+              <h2>PARADISE</h2>
+              <p>Panneau d'administration</p>
+            </div>
+
+            <nav class="sidebar-nav">
+              <a class="active" href="#">Tableau de bord</a>
+              <a href="reservation.html">Réservations</a>
+              <a href="rooms.html">Chambres</a>
+              <a href="contact.html">Messages</a>
+            </nav>
+
+            <div class="sidebar-stats">
+              <div class="stat">
+                <strong>24</strong>
+                <span>Réservations ce mois</span>
+              </div>
+              <div class="stat">
+                <strong>8</strong>
+                <span>Chambres occupées</span>
+              </div>
+            </div>
+          </aside>
+
+          <div class="admin-content">
+            <div class="page-intro">
+              <h1>Administration</h1>
+              <p>Surveillez les réservations, gérez les chambres et suivez les demandes clients depuis un tableau de bord moderne.</p>
+            </div>
+
+            <div class="stats-grid">
+              <article class="panel">
+                <h3>Réservations</h3>
+                <div class="large">128</div>
+                <p>Cette semaine</p>
+              </article>
+              <article class="panel">
+                <h3>Revenus</h3>
+                <div class="large">24.8k $</div>
+                <p>Mensuels</p>
+              </article>
+              <article class="panel">
+                <h3>Clients</h3>
+                <div class="large">76</div>
+                <p>Actifs</p>
+              </article>
+            </div>
+
+            <section class="panel">
+              <h3>Réservations récentes</h3>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Client</th>
+                      <th>Chambre</th>
+                      <th>Date</th>
+                      <th>Statut</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Amine K.</td>
+                      <td>Suite Deluxe</td>
+                      <td>12/08/2026</td>
+                      <td><span class="status confirmed">Confirmée</span></td>
+                    </tr>
+                    <tr>
+                      <td>Sara D.</td>
+                      <td>Chambre Standard</td>
+                      <td>15/08/2026</td>
+                      <td><span class="status pending">En attente</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© 2026 Hôtel Paradise</div>
+      </div>
+    </footer>
+  </body>
+</html>

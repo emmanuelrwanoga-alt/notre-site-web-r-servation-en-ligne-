@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hôtel Paradise — Réservation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">PARADISE</div>
+        <nav class="main-nav">
+          <a href="index.html">Accueil</a>
+          <a href="chambres.html">Chambres</a>
+          <a href="restaurant.html">Restaurant</a>
+          <a href="services.html">Services</a>
+          <a href="reservation.html">Réservation</a>
+          <a href="contact.html">Contact</a>
+          <a href="client.html">Espace Client</a>
+          <a href="admin.html">Administration</a>
+        </nav>
+        <a class="btn reserv" href="reservation.html">RÉSERVER</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="page-intro">
+        <h1>Réservation</h1>
+        <p>Réservez votre séjour avec simplicité et profitez d’un accueil personnalisé à l’hôtel Paradise.</p>
+      </section>
+
+      <section class="reservation-form container">
+        <h2>Informations de réservation</h2>
+        <div class="form-grid">
+          <label>Arrivée<input type="date" value="2026-09-01"></label>
+          <label>Départ<input type="date" value="2026-09-05"></label>
+          <label>Chambre<select>
+            <option>Chambre Standard</option>
+            <option>Chambre Deluxe</option>
+            <option>Suite Junior</option>
+            <option>Suite Royale</option>
+          </select></label>
+          <label>Adultes<select>
+            <option>2</option>
+            <option>1</option>
+            <option>3</option>
+          </select></label>
+          <label>Enfants<select>
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+          </select></label>
+          <label>Nom complet<input type="text" placeholder="Votre nom"></label>
+          <label>Email<input type="email" placeholder="Votre email"></label>
+        </div>
+        <button class="btn primary">CONFIRMER LA RÉSERVATION</button>
+      </section>
+
+      <section class="summary-grid">
+        <article class="card">
+          <h3>Ce que nous offrons</h3>
+          <p>Confirmation rapide, annulation flexible et assistance dédiée pour préparer votre arrivée sereinement.</p>
+        </article>
+        <article class="card">
+          <h3>Besoin d'aide ?</h3>
+          <p>Contactez-nous pour toute demande spéciale, transfert ou arrangement avant votre arrivée.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© 2026 Hôtel Paradise</div>
+      </div>
+    </footer>
+  </body>
+</html>

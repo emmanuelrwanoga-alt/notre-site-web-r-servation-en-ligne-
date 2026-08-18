@@ -1,0 +1,1701 @@
+/* =========================================================
+   HOTEL PARADISE
+   STYLE.CSS
+   ========================================================= */
+
+/* =========================================================
+   1. VARIABLES
+   ========================================================= */
+
+:root {
+    --primary: #07111f;
+    --primary-soft: #14253d;
+
+    --accent: #c9a24b;
+    --accent-soft: #e8d2a2;
+
+    --text: #1f2937;
+    --muted: #6b7280;
+
+    --surface: #f7f3eb;
+    --surface-2: #fffdf9;
+
+    --border: #e8dfcf;
+
+    --success: #0f766e;
+    --warning: #b45309;
+    --danger: #b91c1c;
+
+    --shadow: 0 18px 45px rgba(7, 17, 31, 0.12);
+
+    --radius: 22px;
+}
+
+
+/* =========================================================
+   2. RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Poppins", sans-serif;
+
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #f7f3eb 0%, #fcfaf7 100%);
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+}
+
+img {
+    display: block;
+    max-width: 500%;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   3. CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(1200px, 92%);
+    margin: auto;
+}
+
+
+/* =========================================================
+   4. HEADER
+   ========================================================= */
+
+.site-header,
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, rgba(7, 17, 31, 0.98), rgba(20, 37, 61, 0.96));
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(7, 17, 31, 0.18);
+}
+
+
+/* Navigation */
+
+.header-inner,
+.navbar {
+    width: min(1200px, 92%);
+    margin: auto;
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--surface-2);
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.logo i {
+    color: var(--accent);
+    font-size: 24px;
+}
+
+.logo h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.15rem;
+    letter-spacing: 0.2em;
+}
+
+
+/* Menu */
+
+.main-nav,
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.main-nav a,
+.menu a {
+    color: #e2e8f0;
+    font-weight: 500;
+    padding: 7px 10px;
+    border-radius: 999px;
+    transition: 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible,
+.menu a:hover,
+.menu a:focus-visible {
+    background: rgba(199, 154, 69, 0.16);
+    color: var(--accent-soft);
+}
+
+.main-nav a.active,
+.menu a.active,
+.main-nav .active,
+.menu .active {
+    color: var(--accent-soft);
+}
+/* =========================================================
+   5. BUTTONS
+   ========================================================= */
+.btn,
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    border-radius: 999px;
+    padding: 11px 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover,
+.hero-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Bouton doré */
+
+.btn.primary,
+.btn,
+.hero-btn {
+    background: linear-gradient(135deg, var(--accent), #e7c77b);
+    color: var(--primary);
+    box-shadow: 0 12px 24px rgba(201, 162, 75, 0.24);
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+
+/* Bouton réservation */
+
+.btn.reserv {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: var(--surface-2);
+}
+
+.btn.reserv:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Animation et interactions */
+.reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.is-visible,
+.hero.is-ready,
+.hero-copy.is-ready,
+.reservation-box.is-ready {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-message {
+    margin-top: 10px;
+    min-height: 1.2em;
+    font-size: 0.95rem;
+    color: var(--warning);
+}
+
+.form-message.success {
+    color: var(--success);
+    font-weight: 600;
+}
+
+button:disabled {
+    opacity: 0.75;
+    cursor: wait;
+}
+
+/* Bouton contour */
+
+.btn--outline {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+}
+
+.btn--outline:hover {
+    background: rgba(199, 154, 69, 0.12);
+}
+
+
+/* =========================================================
+   6. HERO ACCUEIL
+   ========================================================= */
+
+.hero {
+    position: relative;
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:url("photo/WhatsApp\ Image\ 2026-08-09\ at\ 23.47.46.jpeg")
+        center center / cover no-repeat;
+    color: var(--surface-2);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(7, 17, 31, 0.86), rgba(20, 37, 61, 0.68), rgba(7, 17, 31, 0.82));
+}
+
+.hero-overlay,
+.overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(199, 154, 69, 0.18),
+            transparent 35%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 920px;
+    padding: 56px 20px;
+}
+
+.hero .eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: var(--accent-soft);
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
+    line-height: 1.15;
+    margin-bottom: 14px;
+    letter-spacing: 0.03em;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.hero h1 span {
+    color: var(--accent-soft);
+}
+
+.hero .lead,
+.hero-content p {
+    font-size: 1.05rem;
+    max-width: 700px;
+    margin: 0 auto 24px;
+    opacity: 0.95;
+}
+
+
+/* =========================================================
+   7. HERO DES PAGES
+   ========================================================= */
+
+.page-hero {
+    position: relative;
+    min-height: 48vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:url("photo/ChatGPT\ Image\ 31\ juil.\ 2026\,\ 17_51_01.png")
+        center / cover no-repeat;
+
+    color: white;
+}
+
+.page-hero .hero-content {
+    z-index: 2;
+}
+
+.page-hero h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(2.2rem, 4vw, 3.6rem);
+    margin-bottom: 12px;
+}
+
+.page-hero p {
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   8. TITRES DES SECTIONS
+   ========================================================= */
+
+.section-title,
+.page-intro {
+    text-align: center;
+    padding: 30px 0;
+    margin-bottom: 25px;
+}
+
+.section-title h2,
+.page-intro h1,
+.page-intro h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    color: var(--primary);
+    font-size: clamp(1.9rem, 3vw, 2.6rem);
+    margin-bottom: 8px;
+    letter-spacing: 0.02em;
+}
+
+.section-title p,
+.page-intro p {
+    max-width: 720px;
+
+    margin: auto;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   9. FORMULAIRE DE RÉSERVATION
+   ========================================================= */
+
+.booking {
+    padding: 45px 8%;
+
+    background: var(--surface);
+}
+
+.booking-box,
+.reservation-form {
+    width: min(100%, 1000px);
+    margin: auto;
+    padding: 22px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.booking-box {
+    display: grid;
+    grid-template-columns:
+        repeat(5, minmax(140px, 1fr));
+
+    gap: 14px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-box label,
+.reservation-form label {
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.input-box input,
+.input-box select,
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea,
+.contact-form input,
+.contact-form textarea,
+.filter-panel input,
+.filter-panel select {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 11px 12px;
+    background: #fbfdff;
+    color: var(--text);
+    outline: none;
+}
+
+.input-box input:focus,
+.input-box select:focus,
+.reservation-form input:focus,
+.reservation-form select:focus,
+.reservation-form textarea:focus,
+.contact-form input:focus,
+.contact-form textarea:focus,
+.filter-panel input:focus,
+.filter-panel select:focus {
+    border-color: var(--accent);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(199, 154, 69, 0.15);
+}
+
+.booking-box button {
+    align-self: end;
+    min-height: 48px;
+    border: none;
+    border-radius: 12px;
+    background: var(--accent);
+    color: white;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.booking-box button:hover {
+    background: #b88935;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   10. CHAMBRES
+   ========================================================= */
+
+.rooms {
+    padding: 80px 8%;
+    background: var(--surface);
+}
+
+.room-container,
+.rooms-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 25px;
+    width: min(1200px, 100%);
+    margin: auto;
+}
+
+.room-panel {
+    display: grid;
+    grid-template-columns: 320px minmax(0, 1fr);
+    gap: 22px;
+    width: min(1200px, 100%);
+    margin: auto;
+}
+
+.filter-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 28px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.filter-panel h2 {
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.filter-panel label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.filter-panel select {
+    background: #ffffff;
+}
+
+.filter-panel .btn {
+    width: 100%;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    width: min(1200px, 100%);
+    margin: 32px auto 0;
+}
+
+.summary-grid .card {
+    padding: 24px;
+}
+
+
+/* Carte chambre */
+
+.room-card {
+    overflow: hidden;
+    background: linear-gradient(180deg, #fffdfa 0%, #f8f2e8 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.room-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 22px 45px
+        rgba(15, 23, 42, 0.17);
+}
+
+
+/* Image */
+
+.room-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 0;
+    transition: transform 0.5s ease;
+}
+
+.room-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* Contenu */
+
+.room-content {
+    padding: 22px;
+}
+
+.room-content h3 {
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.4rem;
+}
+
+.room-content p {
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+
+
+/* Prix */
+
+.price {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--accent) !important;
+}
+
+.price span {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--muted);
+}
+
+
+/* Étoiles */
+
+.stars {
+    color: var(--accent) !important;
+    letter-spacing: 2px;
+    margin: 10px 0;
+}
+
+
+/* Informations */
+
+.room-content ul {
+    margin: 18px 0;
+}
+
+.room-content ul li {
+    color: var(--muted);
+    margin-bottom: 9px;
+    font-size: 0.92rem;
+}
+
+.room-content ul li i {
+    width: 22px;
+    color: var(--accent);
+}
+
+
+/* Boutons chambres */
+
+.room-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.room-buttons a {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 9px 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.room-buttons a:first-child {
+    border: 1px solid var(--accent);
+    color: var(--accent);
+}
+
+.room-buttons a:last-child {
+    background: var(--accent);
+    color: white;
+}
+
+.room-buttons a:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   11. FILTRE
+   ========================================================= */
+
+.room-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 30px 8%;
+    background: white;
+}
+
+.room-filter button {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 10px 22px;
+    background: white;
+    color: var(--muted);
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.room-filter button:hover,
+.room-filter button.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+}
+
+
+/* =========================================================
+   12. SERVICES
+   ========================================================= */
+
+.services,
+.equipements {
+    padding: 80px 8%;
+    background: white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 22px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.service-card {
+    padding: 30px 22px;
+    text-align: center;
+    background: linear-gradient(145deg, #fffdfa 0%, #f4ebdc 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    background: var(--primary);
+    color: white;
+}
+
+.service-card i {
+    font-size: 42px;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.service-card:hover h3 {
+    color: white;
+}
+
+.service-card p {
+    color: var(--muted);
+}
+
+.service-card:hover p {
+    color: #dbe4ef;
+}
+
+
+/* =========================================================
+   13. RESTAURANT
+   ========================================================= */
+
+.restaurant {
+    padding: 80px 8%;
+    background: var(--surface);
+}
+
+.restaurant-container {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 22px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.restaurant-card,
+.menu-item {
+    background: linear-gradient(180deg, #fffdfa 0%, #f7efe1 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: 0.3s ease;
+}
+
+.restaurant-card:hover,
+.menu-item:hover {
+    transform: translateY(-6px);
+}
+
+.restaurant-card img,
+.menu-item img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 0;
+}
+
+.restaurant-card h3,
+.restaurant-card p,
+.restaurant-card span {
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+.restaurant-card h3 {
+    margin-top: 18px;
+    color: var(--primary);
+}
+
+.restaurant-card p {
+    color: var(--muted);
+    margin-top: 5px;
+}
+
+.restaurant-card span {
+    display: block;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 12px 0 20px;
+}
+
+
+/* =========================================================
+   14. TÉMOIGNAGES
+   ========================================================= */
+
+.testimonials {
+    padding: 80px 8%;
+    background: white;
+}
+
+.testimonial-container {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 22px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.testimonial {
+    padding: 25px;
+    text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.testimonial img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+.testimonial h3 {
+    color: var(--primary);
+}
+
+.testimonial p {
+    color: var(--muted);
+}
+
+.testimonial p:first-of-type {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   15. FAQ
+   ========================================================= */
+
+.faq {
+    padding: 80px 8%;
+    background: var(--surface);
+}
+
+.faq-box {
+    width: min(900px, 100%);
+    margin: auto;
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 14px;
+    box-shadow:
+        0 8px 20px
+        rgba(15, 23, 42, 0.07);
+}
+
+.faq-item h3 {
+    color: var(--primary);
+    margin-bottom: 7px;
+}
+
+.faq-item p {
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   16. CONTACT
+   ========================================================= */
+
+.contact {
+    padding: 70px 8%;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns:
+        1fr 1fr;
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contact-form,
+.contact-grid > div {
+    padding: 25px;
+    background: linear-gradient(180deg, #fffdfa 0%, #f8f1e4 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(6px);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+
+/* =========================================================
+   17. ADMINISTRATION / DASHBOARD
+   ========================================================= */
+
+.dashboard {
+    padding: 50px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.panel,
+.card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 22px;
+}
+
+.panel h3,
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.panel .large {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white var(--primary);
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th,
+td {
+    padding: 13px 10px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+}
+
+th {
+    color: var(--muted);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.status.confirmed {
+    color: var(--success);
+    font-weight: 700;
+}
+
+.status.pending {
+    color: var(--warning);
+    font-weight: 700;
+}
+
+.status.cancelled {
+    color: var(--danger);
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   18. FOOTER
+   ========================================================= */
+
+.site-footer,
+footer {
+    background:
+        linear-gradient(
+            180deg,
+            var(--primary),
+            #09111d
+        );
+
+    color: #ced8e4;
+    padding: 60px 8% 20px;
+    margin-top: 30px;
+}
+
+.footer-container {
+    width: min(1200px, 100%);
+    margin: auto;
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 35px;
+}
+
+.footer-box h2,
+.footer-box h3 {
+    color: var(--accent-soft);
+    margin-bottom: 15px;
+}
+
+.footer-box p {
+    color: #cbd5e1;
+
+    margin-bottom: 8px;
+}
+
+.footer-box ul li {
+    margin-bottom: 8px;
+}
+
+.footer-box ul li a {
+    color: #cbd5e1;
+
+    transition: 0.3s ease;
+}
+
+.footer-box ul li a:hover {
+    color: var(--accent-soft);
+}
+
+.footer-box > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    transition: 0.3s ease;
+}
+
+.footer-box > a:hover {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 40px;
+    padding-top: 18px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   19. CLASSES UTILITAIRES
+   ========================================================= */
+
+.grid-2 {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background: #eef2f7;
+    color: var(--primary);
+}
+
+.badge--gold {
+    background: rgba(199,154,69,0.18);
+    color: var(--accent);
+}
+
+.pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pill-list li {
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #f3f5f8;
+    color: var(--muted);
+}
+
+.text-accent {
+    color: var(--accent);
+}
+
+.shadow-soft {
+    box-shadow:
+        0 10px 30px
+        rgba(15,23,42,0.08);
+}
+
+.hover-lift {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 16px 35px
+        rgba(15,23,42,0.14);
+}
+
+
+/* =========================================================
+   20. RESPONSIVE TABLETTE
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    .navbar,
+    .header-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px 0;
+    }
+
+    .menu,
+    .main-nav {
+        justify-content: center;
+    }
+
+    .booking-box {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   21. RESPONSIVE MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar,
+    .header-inner {
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px 0;
+    }
+
+    .menu,
+    .main-nav {
+        gap: 4px;
+    }
+
+    .menu a,
+    .main-nav a {
+        font-size: 0.85rem;
+        padding: 5px 7px;
+    }
+
+    .hero {
+        min-height: 85vh;
+    }
+
+    .hero-content {
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .page-hero {
+        min-height: 42vh;
+    }
+
+    .page-hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .booking {
+        padding: 30px 5%;
+    }
+
+    .booking-box {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+
+    .rooms,
+    .services,
+    .equipements,
+    .restaurant,
+    .testimonials,
+    .faq,
+    .contact {
+        padding: 55px 5%;
+    }
+
+    .room-container,
+    .rooms-grid,
+    .services-grid,
+    .restaurant-container,
+    .testimonial-container {
+        grid-template-columns: 1fr;
+    }
+
+    .room-buttons {
+        flex-direction: column;
+    }
+
+    .room-filter {
+        padding: 25px 5%;
+    }
+
+    .room-filter button {
+        flex: 1 1 120px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-box > a {
+        margin: 4px;
+    }
+}
+
+
+/* =========================================================
+   22. PETIT MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .logo h2 {
+        font-size: 1rem;
+    }
+
+    .logo i {
+        font-size: 20px;
+    }
+
+    .menu {
+        gap: 2px;
+    }
+
+    .menu a {
+        font-size: 0.75rem;
+    }
+
+    .btn {
+        padding: 9px 15px;
+
+        font-size: 0.85rem;
+    }
+
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .room-card img {
+        height: 210px;
+    }
+
+    .room-content {
+        padding: 18px;
+    }
+
+    .price {
+        font-size: 1.5rem;
+    }
+}
+
+/* =========================================================
+   23. MOCKUP OVERRIDES (Hero panel, cards, menu, dashboard)
+   ========================================================= */
+
+/* Hero centered white panel like mockup */
+.hero .content-panel {
+    margin: 0 auto;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 22px 40px hsla(220, 10%, 94%, 0.906);
+    position: relative;
+    z-index: 4;
+}
+
+.hero .content-panel .hero-inner{
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 28px;
+    align-items: center;
+}
+
+.hero .content-panel h1{color:#d8f34237, 233, 233(55, 255, 255) var(--primary);margin:0 0 6px}
+.hero .content-panel p{color:yellow var(--muted);margin:0 0 12px}
+
+/* Reservation box (right column) */
+.hero .reservation-box{
+    background: var(--surface-2);
+    border-radius: 14px;
+    padding: 16px;
+    border: 1px solid var(--border);
+}
+
+.hero .reservation-box .row{gap:8px}
+.hero .reservation-box .btn{width:100%;padding:12px 14px}
+
+/* Card style like mockup */
+.card{
+    background: var(--surface-2);
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: 0 12px 30px rgba(7,17,31,0.08);
+}
+.card img{height: 210px;object-fit:cover}
+.card .card-body{padding:16px}
+.card .card-title{font-family:"Playfair Display", Georgia, serif;font-size:1.05rem;margin:0 0 8px}
+.card .card-meta{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.card .details-btn{background:transparent;border:1px solid var(--border);padding:6px 10px;border-radius:8px;font-weight:700}
+.card .price{font-weight:800;color:var(--accent)}
+
+/* Generic cards grid */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+
+.hero-copy {
+    text-align: left;
+}
+
+.hero .reservation-box .row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.hero .reservation-box .row:last-child {
+    grid-template-columns: 1fr;
+}
+
+.hero .reservation-box label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.92rem;
+    color: var(--muted);
+}
+
+.hero .reservation-box input,
+.hero .reservation-box select {
+    background: #ffffff;
+}
+
+.rooms-grid{grid-template-columns:repeat(2,minmax(260px,1fr));gap:22px}
+
+/* Restaurant menu layout */
+.menu-list{display:grid;gap:12px}
+.menu-item{display:flex;gap:14px;align-items:flex-start;padding:12px;border-radius:12px;background:var(--surface-2);border:1px solid var(--border)}
+.menu-item img{width:96px;height:72px;object-fit:cover;border-radius:8px}
+.menu-item .menu-copy{flex:1}
+.menu-item .menu-title{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.menu-item .menu-title h4{margin:0;font-weight:700;color:var(--primary)}
+.menu-item .menu-price{color:var(--accent);font-weight:800}
+
+/* Dashboard dark theme (admin mockup) */
+.admin-dashboard{
+    background: linear-gradient(180deg,#05111a,#071824);
+    color:#c9d6e3;
+    padding:24px;
+    border-radius:14px;
+}
+.admin-dashboard .dashboard-layout{
+    display:grid;
+    grid-template-columns: 320px minmax(0,1fr);
+    gap: 24px;
+}
+.admin-dashboard .admin-sidebar{
+    background: rgba(13,27,44,0.95);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 22px;
+    padding: 26px;
+}
+.admin-dashboard .sidebar-brand h2,
+.admin-dashboard .sidebar-brand p{
+    margin: 0;
+}
+.admin-dashboard .sidebar-brand h2{
+    font-size: 1.7rem;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+}
+.admin-dashboard .sidebar-brand p{
+    margin-top: 10px;
+    color: #b8c7d9;
+}
+.admin-dashboard .sidebar-nav{
+    margin: 30px 0 18px;
+    display: grid;
+    gap: 10px;
+}
+.admin-dashboard .sidebar-nav a{
+    display: block;
+    padding: 12px 16px;
+    border-radius: 14px;
+    color: #d6e6f2;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+.admin-dashboard .sidebar-nav a:hover{
+    background: rgba(201,162,75,0.16);
+    color: var(--accent);
+}
+.admin-dashboard .sidebar-stats{
+    margin-top: 24px;
+    display: grid;
+    gap: 14px;
+}
+.admin-dashboard .sidebar-stats .stat{
+    background: rgba(255,255,255,0.05);
+    border: 1px solid #ffffff0d;
+    padding: 16px;
+    border-radius: 14px;
+}
+.admin-dashboard .sidebar-stats .stat strong{
+    display: block;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+.admin-dashboard .sidebar-stats .stat span{
+    color: #a3b6cd;
+}
+.admin-dashboard .admin-content{
+    display: grid;
+    gap: 24px;
+}
+.admin-dashboard .panel,
+.admin-dashboard .card{
+    background: linear-gradient(180deg, #0c1626f2, #080f1cf2);
+    border-color: #ffffff0f;
+    color: #d6e6f2;
+}
+.admin-dashboard .panel h3,
+.admin-dashboard .card h3,
+.admin-dashboard .page-intro h1,
+.admin-dashboard .page-intro p{
+    color: #e7eef7;
+}
+.admin-dashboard .table-responsive{
+    background: transparent;
+}
+.admin-dashboard table{
+    color: #cfe6ff;
+}
+.admin-dashboard th,
+.admin-dashboard td{
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.admin-dashboard .badge--gold{
+    background:rgba(201,162,75,0.12);
+    color:var(--accent);
+}
+
+/* Restaurant detailed menu layout */
+.restaurant-main{
+    display:grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(360px, 2fr);
+    gap: 28px;
+    width: min(1200px, 100%);
+    margin: auto;
+}
+.restaurant-panel{
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+}
+.restaurant-panel h2{
+    margin-bottom: 14px;
+    color: var(--primary);
+}
+.restaurant-panel p{
+    margin-bottom: 24px;
+    color: var(--muted);
+}
+.restaurant-panel .menu-info{
+    display:grid;
+    gap: 14px;
+}
+.menu-list{
+    display:grid;
+    gap: 18px;
+}
+.menu-item{
+    display:flex;
+    gap: 18px;
+    align-items:flex-start;
+    padding: 20px;
+    border-radius: 18px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 28px rgba(7,17,31,0.08);
+}
+.menu-item img{
+    width: 130px;
+    height: 110px;
+    object-fit:cover;
+    border-radius: 16px;
+    flex-shrink: 0;
+}
+.menu-item .menu-copy{
+    flex: 1;
+    display:grid;
+    gap: 10px;
+}
+.menu-item .menu-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap: 14px;
+}
+.menu-item .menu-title h4{
+    margin:0;
+    font-weight:700;
+    color:var(--primary);
+    font-size: 1.05rem;
+}
+.menu-item .menu-title .menu-price{
+    color:var(--accent);
+    font-weight:800;
+    white-space: nowrap;
+}
+.menu-item p{
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+@media (max-width: 880px){
+    .hero .content-panel .hero-inner{
+        grid-template-columns:1fr;
+    }
+    .rooms-grid{
+        grid-template-columns:1fr;
+    }
+    .restaurant-main{
+        grid-template-columns:1fr;
+    }
+    .admin-dashboard .dashboard-layout{
+        grid-template-columns:1fr;
+    }
+    .room-panel {
+        grid-template-columns: 1fr;
+    }
+    .filter-panel,
+    .restaurant-panel,
+    .hero .reservation-box {
+        padding: 20px;
+    }
+}

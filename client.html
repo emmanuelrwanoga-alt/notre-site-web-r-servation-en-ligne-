@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hôtel Paradise – Espace Client</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="client.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">PARADISE</div>
+        <nav class="main-nav">
+          <a href="index.html">Accueil</a>
+          <a href="chambres.html">Chambres</a>
+          <a href="restaurant.html">Restaurant</a>
+          <a href="services.html">Services</a>
+          <a href="reservation.html">Réservation</a>
+          <a href="contact.html">Contact</a>
+          <a href="client.html" class="active">Espace Client</a>
+          <a href="admin.html">Administration</a>
+        </nav>
+        <a class="btn reserv" href="reservation.html">RÉSERVER</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="client-area">
+        <div class="client-shell">
+          <div class="client-hero">
+            <div class="client-hero__content">
+              <span class="eyebrow">Espace client</span>
+              <h1>Bonjour, Claire</h1>
+              <p>Votre prochain séjour se prépare déjà. Retrouvez ici vos réservations, vos préférences et les services à votre disposition.</p>
+            </div>
+            <div class="client-badge">
+              <span>Statut</span>
+              <strong>Membre Premium</strong>
+            </div>
+          </div>
+
+          <div class="client-grid">
+            <article class="client-panel">
+              <div class="panel-header">
+                <div>
+                  <p class="panel-kicker">Tableau de bord</p>
+                  <h2>Mes réservations</h2>
+                </div>
+                <a class="btn" href="reservation.html">Nouvelle réservation</a>
+              </div>
+
+              <div class="client-summary">
+                <div class="summary-card">
+                  <strong>2</strong>
+                  <span>séjours à venir</span>
+                </div>
+                <div class="summary-card">
+                  <strong>1</strong>
+                  <span>service favori</span>
+                </div>
+                <div class="summary-card">
+                  <strong>4,9/5</strong>
+                  <span>note moyenne</span>
+                </div>
+              </div>
+
+              <ul class="client-list">
+                <li>
+                  <div>
+                    <h3>Réservation #12345</h3>
+                    <p>Chambre Deluxe • 12/09/2026 → 15/09/2026</p>
+                  </div>
+                  <span class="status-pill confirmed">Confirmée</span>
+                </li>
+                <li>
+                  <div>
+                    <h3>Réservation #67890</h3>
+                    <p>Suite Junior • 01/11/2026 → 05/11/2026</p>
+                  </div>
+                  <span class="status-pill pending">À préparer</span>
+                </li>
+              </ul>
+
+              <div class="client-actions">
+                <a class="btn" href="reservation.html">Faire une nouvelle réservation</a>
+                <a class="btn btn--outline" href="contact.html">Contacter l’hôtel</a>
+              </div>
+            </article>
+
+            <aside class="client-sidebar">
+              <div class="info-card">
+                <p class="panel-kicker">Préférences</p>
+                <h3>Vos choix préférés</h3>
+                <ul>
+                  <li>Vue sur la mer</li>
+                  <li>Petit-déjeuner inclus</li>
+                  <li>Arrivée tardive</li>
+                </ul>
+              </div>
+
+              <div class="info-card">
+                <p class="panel-kicker">Besoin d’aide ?</p>
+                <h3>Service concierge</h3>
+                <p>Notre équipe vous accompagne pour organiser vos transferts, excursions et demandes spéciales.</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© 2026 Hôtel Paradise</div>
+      </div>
+    </footer>
+  </body>
+</html>

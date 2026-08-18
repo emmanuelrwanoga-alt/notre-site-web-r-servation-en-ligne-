@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hôtel Paradise — Chambres</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">PARADISE</div>
+        <nav class="main-nav">
+          <a href="index.html">Accueil</a>
+          <a href="chambres.html">Chambres</a>
+          <a href="restaurant.html">Restaurant</a>
+          <a href="services.html">Services</a>
+          <a href="reservation.html">Réservation</a>
+          <a href="contact.html">Contact</a>
+          <a href="client.html">Espace Client</a>
+          <a href="admin.html">Administration</a>
+        </nav>
+        <a class="btn reserv" href="reservation.html">RÉSERVER</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="page-intro">
+        <h1>Nos Chambres</h1>
+        <p>Découvrez des espaces raffinés conçus pour votre confort, votre détente et votre plaisir à Bukavu.</p>
+      </section>
+
+      <section class="rooms-list">
+        <div class="room-panel">
+          <div class="filter-panel">
+            <h2>Filtrer les chambres</h2>
+            <label>Type de chambre
+              <select>
+                <option>Tout</option>
+                <option>Simple</option>
+                <option>Double</option>
+                <option>Suite</option>
+              </select>
+            </label>
+            <label>Équipements
+              <select>
+                <option>Tous</option>
+                <option>Wi-Fi</option>
+                <option>Climatisation</option>
+                <option>Balcon</option>
+              </select>
+            </label>
+            <button class="btn">Appliquer</button>
+          </div>
+
+          <div class="rooms-grid">
+            <article class="room-card">
+              <img src="photo/WhatsApp Image 2026-08-09 at 23.47.45 (2).jpeg" alt="Chambre Standard">
+              <div class="room-content">
+                <h3>Chambre Standard</h3>
+                <p class="price">80$ / nuit</p>
+                <p>Lit double, salle de bain privée, Wi-Fi inclus et ambiance calme.</p>
+                <div class="room-buttons">
+                  <a class="btn btn--outline" href="#">Détails</a>
+                  <a class="btn primary" href="reservation.html">RÉSERVER</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="room-card">
+              <img src="photo/WhatsApp Image 2026-08-09 at 23.47.45 (1).jpeg" alt="Chambre Deluxe">
+              <div class="room-content">
+                <h3>Chambre Deluxe</h3>
+                <p class="price">120$ / nuit</p>
+                <p>Balcon avec vue sur le lac, minibar et service en chambre premium.</p>
+                <div class="room-buttons">
+                  <a class="btn btn--outline" href="#">Détails</a>
+                  <a class="btn primary" href="reservation.html">RÉSERVER</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="room-card">
+              <img src="photo/WhatsApp Image 2026-08-09 at 23.47.45.jpeg" alt="Suite Junior">
+              <div class="room-content">
+                <h3>Suite Junior</h3>
+                <p class="price">180$ / nuit</p>
+                <p>Espace salon, baignoire spa et petit-déjeuner inclus.</p>
+                <div class="room-buttons">
+                  <a class="btn btn--outline" href="#">Détails</a>
+                  <a class="btn primary" href="reservation.html">RÉSERVER</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="room-card">
+              <img src="photo/WhatsApp Image 2026-08-09 at 23.47.44 (3).jpeg" alt="Suite Royale">
+              <div class="room-content">
+                <h3>Suite Royale</h3>
+                <p class="price">300$ / nuit</p>
+                <p>Terrasse privée, jacuzzi et service VIP personnalisé.</p>
+                <div class="room-buttons">
+                  <a class="btn btn--outline" href="#">Détails</a>
+                  <a class="btn primary" href="reservation.html">RÉSERVER</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© 2026 Hôtel Paradise</div>
+      </div>
+    </footer>
+  </body>
+</html>
